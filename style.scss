@@ -106,6 +106,10 @@ html {
   &:hover {
     background: var(--blue-hover);
   }
+
+  &:focus-visible {
+    outline-color: var(--blue);
+  }
 }
 
 .btn-sm-secondary {
@@ -124,8 +128,17 @@ html {
   line-height: 1.5;
   color: var(--white);
 
+  transition:
+    background-image 0.3s,
+    outline 0.2s;
+
   &:hover {
     background-image: var(--gradient-secondary-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
   }
 }
 
@@ -245,10 +258,18 @@ header {
 
     cursor: pointer;
 
-    transition: color 0.3s;
+    transition:
+      color 0.3s,
+      outline 0.2s;
 
     &:hover {
       color: var(--primary-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 6px;
+      border-radius: 100vmax;
     }
   }
 

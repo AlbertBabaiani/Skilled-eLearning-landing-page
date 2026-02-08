@@ -86,6 +86,9 @@ html {
 .btn-secondary:hover {
   background: var(--blue-hover);
 }
+.btn-secondary:focus-visible {
+  outline-color: var(--blue);
+}
 
 .btn-sm-secondary {
   padding: 1.2rem 2.4rem;
@@ -99,9 +102,14 @@ html {
   font-weight: bold;
   line-height: 1.5;
   color: var(--white);
+  transition: background-image 0.3s, outline 0.2s;
 }
 .btn-sm-secondary:hover {
   background-image: var(--gradient-secondary-hover);
+}
+.btn-sm-secondary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 header {
@@ -190,10 +198,15 @@ header {
   text-decoration: none;
   text-transform: capitalize;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s, outline 0.2s;
 }
 .card a:hover {
   color: var(--primary-hover);
+}
+.card a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 6px;
+  border-radius: 100vmax;
 }
 .card .icon {
   position: absolute;
