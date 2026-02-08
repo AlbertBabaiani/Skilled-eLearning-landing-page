@@ -66,7 +66,11 @@ html {
   font-weight: bold;
   line-height: 1.5;
   color: var(--white);
-  transition: background 0.3s, background-image 0.3s;
+  transition: background 0.3s, background-image 0.3s, outline 0.2s;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .btn-primary {

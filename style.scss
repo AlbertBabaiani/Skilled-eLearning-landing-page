@@ -83,7 +83,13 @@ html {
 
   transition:
     background 0.3s,
-    background-image 0.3s;
+    background-image 0.3s,
+    outline 0.2s;
+
+  &:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
 }
 
 .btn-primary {
